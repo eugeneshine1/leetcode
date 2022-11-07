@@ -16,10 +16,6 @@ class Solution {
             palin = palin*10 + lastDigit;
             x=x/10;
         }
-        if (palin==originalNum) {
-            return true;
-        } else {
-            return false;
-        }
+        return palin == originalNum;
     }
 }
