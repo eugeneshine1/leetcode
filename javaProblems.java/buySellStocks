@@ -4,5 +4,15 @@ class Solution {
         // as you loop, if the value is lower, set it to the buy value
         // as you continue to loop, if the price minus the set buy value is greater than profit, set it to the profit value
         // continue the loop to find the highest profit and return the value
+        int profit = 0; 
+        int buy = prices[0];
+        for (int i=0; i<prices.length; i++) {
+            if (buy > prices[i]) {
+                buy = prices[i];
+            } else if (prices[i] - buy > profit) {
+                profit = prices[i]- buy;
+            }
+        }
+       return profit;
     }
 }
