@@ -4,5 +4,10 @@ class Solution {
         // sort both the arrays and set it to equal each other (.equals not ==)
         // .equals looks at value and == looks at reference 
         // return if true, else false;
+        char[] sArr = s.toCharArray();
+        char[] tArr = t.toCharArray();
+        Arrays.sort(sArr);
+        Arrays.sort(tArr);
+        return (Arrays.equals(sArr, tArr));
     }
 }
