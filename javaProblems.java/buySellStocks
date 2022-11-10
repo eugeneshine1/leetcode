@@ -1,18 +1,8 @@
 class Solution {
     public int maxProfit(int[] prices) {
-        // loop through the array to find the smallest value 
-        // then loop through the rest of the array and set it to profit
-        // if the next profit is higher than current profit, set it to highest profit
-        // if the profit were to be negative, return a profit of 0
- 
-        int profit = 0; 
-        for (int i=0; i<prices.length; i++) {
-            for (int idx=i+1; idx<prices.length; idx++) {
-                if (prices[idx] - prices[i]>profit) {
-                    profit = prices[idx] - prices[i];
-                } 
-            }
-        }
-       return profit;
+        // loop through the array 
+        // as you loop, if the value is lower, set it to the buy value
+        // as you continue to loop, if the price minus the set buy value is greater than profit, set it to the profit value
+        // continue the loop to find the highest profit and return the value
     }
 }
