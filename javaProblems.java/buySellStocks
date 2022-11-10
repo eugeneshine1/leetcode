@@ -4,22 +4,15 @@ class Solution {
         // then loop through the rest of the array and set it to profit
         // if the next profit is higher than current profit, set it to highest profit
         // if the profit were to be negative, return a profit of 0
-        
-        int smallestBuy = prices[0];
-        int indexOfBuy = 0;
+ 
+        int profit = 0; 
         for (int i=0; i<prices.length; i++) {
-            if (smallestBuy > prices[i]) {
-                smallestBuy = prices[i];
-                indexOfBuy = i;
-            } 
-        }
-        
-        int profit = 0;
-        for (int i=indexOfBuy+1; i<prices.length; i++) {
-            if (prices[i]-smallestBuy>profit) {
-                profit = prices[i] - smallestBuy;
+            for (int idx=i+1; idx<prices.length; idx++) {
+                if (prices[idx] - prices[i]>profit) {
+                    profit = prices[idx] - prices[i];
+                } 
             }
         }
-        return profit;
+       return profit;
     }
 }
