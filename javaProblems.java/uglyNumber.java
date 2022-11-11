@@ -6,5 +6,22 @@ class Solution {
         // do this step if it is divisble by 2,3,5
         // if the number ends up being one, return true
         // else return false
+        if (n<1){
+            return false;
+        } 
+        
+    while (n%3 ==0 || n%2 ==0 || n%5 ==0){
+        if (n%3 ==0){
+            n/=3;
+        } else if(n%5 ==0) {
+            n/=5;
+        } else{
+            n/=2;
+        }
+    }
+        if (n==1){
+            return true;
+        }
+        return false;
     }
 }
