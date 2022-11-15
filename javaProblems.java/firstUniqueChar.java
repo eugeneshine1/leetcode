@@ -7,5 +7,18 @@ class Solution {
         // else return -1 because there are no unique characters
         // return the index of the character
         
+        int indexOfFirstUniqueChar=0;
+        char charArr[]=s.toCharArray();
+        
+        for(char uniqueChar: charArr){
+            if(s.indexOf(uniqueChar)==s.lastIndexOf(uniqueChar)){
+                indexOfFirstUniqueChar=s.indexOf(uniqueChar);
+                break;
+            }
+            else{
+                indexOfFirstUniqueChar=-1;
+            }
+        }
+        return indexOfFirstUniqueChar;
     }
 }
