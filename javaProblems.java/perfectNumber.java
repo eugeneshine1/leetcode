@@ -14,9 +14,6 @@ class Solution {
             sum+=i;
             }
         }
-        if (sum==num){
-            return true;
-        } 
-        return false;
+        return sum==num;
     }
 }
