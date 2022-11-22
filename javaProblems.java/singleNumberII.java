@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 class Solution {
     public int singleNumber(int[] nums) {
         // create hashmap with key and value to be both integer
