@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class Solution {
     public List<Integer> selfDividingNumbers(int left, int right) {
         //interate through the loop and check if each digit of a number is divisble to the whole number
